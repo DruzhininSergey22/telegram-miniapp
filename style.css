@@ -1,0 +1,327 @@
+* {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+/* Каталог */
+
+
+/* Общие стили */
+.catalog-page {
+    padding: 40px 0;
+    margin-top: 110px;
+}
+
+.pre_catalog_header  {
+    margin: 20px 0px;
+}
+
+/* Хлебные крошки */
+.catalog-breadcrumbs {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.catalog-breadcrumbs a {
+    text-decoration: none;
+    color: #4057DA;
+}
+
+.catalog-breadcrumbs span {
+    color: #000;
+    font-weight: bold;
+}
+
+/* Сортировка - прижат к правому углу */
+.catalog-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+/* Улучшенная кнопка сортировки */
+.catalog-sort-btn {
+    border: 1px solid #ccc;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.catalog-sort-btn:hover {
+    background: #e0e0e0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Фильтр */
+.catalog-sidebar {
+    background: #3D5AFE;
+    padding: 25px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.catalog-sidebar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Улучшение заголовков */
+.catalog-sidebar-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Кнопка "Показать всё" */
+.catalog-show-more, .catalog-hide-filters {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.catalog-show-more:hover, .catalog-hide-filters:hover {
+    color: #d0d0ff;
+    transform: scale(1.05);
+}
+
+/* Скрытые фильтры */
+.catalog-extra-filters {
+    display: none;
+}
+
+/* Фильтр - группы */
+.catalog-filter-group {
+    margin-bottom: 20px;
+}
+
+.catalog-filter-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Поля ввода цены */
+.catalog-price-range {
+    display: flex;
+    gap: 10px;
+}
+
+.catalog-price-range input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Кнопки выбора */
+.catalog-filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.catalog-filter-options button {
+    padding: 8px 14px;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+
+.catalog-filter-options button:hover {
+    background: #f5f5f5;
+    transform: scale(1.05);
+}
+
+/* Активное состояние (при нажатии) */
+.catalog-filter-options button.active {
+    background: #3d5afe;
+    color: #ffffff;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+    transform: scale(1.05);
+}
+
+/* Улучшенные чекбоксы */
+.catalog-filter-group input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Галочка внутри чекбокса */
+.catalog-filter-group input[type="checkbox"]:checked {
+    background: white;
+}
+
+.catalog-filter-group input[type="checkbox"]:checked::after {
+    content: "✔";
+    font-size: 14px;
+    font-weight: bold;
+    color: #3D5AFE;
+    position: absolute;
+    top: -2px;
+    left: 3px;
+}
+
+/* Лейблы для чекбоксов */
+.catalog-filter-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Кнопки "Показать всё" и "Скрыть фильтры" */
+.catalog-show-more, .catalog-hide-filters {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.catalog-show-more:hover, .catalog-hide-filters:hover {
+    color: #d0d0ff;
+    transform: scale(1.05);
+}
+
+/* Улучшенная кнопка сброса */
+.catalog-reset-filter {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.catalog-reset-filter:hover {
+    color: #d0d0ff;
+    transform: scale(1.05);
+}
+
+/* Карточки товаров (добавил твои стили) */
+.column_card_catalog {
+    margin-bottom: 15px;
+}
+
+.product-card-catalog {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 310px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.product-card-catalog:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid #4057DA;
+}
+
+/* Кнопка "В корзину" - плавный переход цвета */
+.btn-pm {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-pm:hover {
+    background-color: #1D2534 !important;
+    transform: scale(1.05);
+}
+
+/* Заголовок карточки */
+.product-header-catalog {
+    display: flex;
+    justify-content: end;
+}
+
+/* Изображение карточки */
+.product-img-catalog {
+    width: 150px;
+    height: auto;
+    margin: 10px auto;
+}
+
+/* Название продукта */
+.product-name-catalog {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Цена и кнопка */
+.product-footer-catalog {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-price-catalog {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.catalog-pagination {
+    display: flex;
+    justify-content: start;
+    margin-top: 20px;
+    gap: 8px;
+}
+
+.pagination-button {
+    background: white;
+    border: none;
+    color: #000000;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.pagination-button:hover {
+    background: #4057DA;
+    color: white;
+}
+
+.pagination-button.active {
+    background: #4057DA;
+    color: white;
+    font-weight: bold;
+}
+
+.catalog-section-popular {
+    margin-bottom: 70px;
+}
