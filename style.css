@@ -29,6 +29,11 @@
 }
 
 /* category */
+
+.block_categories_section {
+    margin-top: 50px;
+}
+
 .category-item {
     position: relative;
     overflow: hidden;
@@ -66,3 +71,7 @@
     opacity: 0.8;
 }
 
+/* catalog */
+.second_section_index_catalog {
+    margin-top: 50px;
+}
