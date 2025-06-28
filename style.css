@@ -106,7 +106,8 @@
 }
 
 .column_card_catalog {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 /* Кнопка "В корзину" - плавный переход цвета */
@@ -127,8 +128,6 @@
 
 /* Изображение карточки */
 .product-img-catalog {
-    width: 150px;
-    height: auto;
     margin: 10px auto;
 }
 
