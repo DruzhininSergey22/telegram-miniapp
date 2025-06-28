@@ -72,33 +72,18 @@
 }
 
 /* animation */
-/* Кнопка каталога с анимацией */
-.btn-catalog {
-    background-color: #4057DA !important;
-    color: white !important;
-    font-size: 16px !important;
-    font-weight: bold !important;
-    padding: 12px 35px !important;
-    border-radius: 17px !important;
-    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out, background 0.3s ease !important;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2) !important;
-}
-
-/*  Эффект при наведении и нажатии  */
-.btn-catalog:hover {
-    background-color: #C0B9EF;
-    transform: scale(1.07);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.btn-catalog:active {
-    transform: scale(0.96);
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+.category-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* catalog */
 .second_section_index_catalog {
     margin-top: 50px;
+}
+
+.catalog-title {
+    
 }
 
 /* catalog > cards */
