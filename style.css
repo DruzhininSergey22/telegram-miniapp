@@ -82,6 +82,11 @@
     margin-top: 50px;
 }
 
+#Apple, #Samsung, #Xiaomi {
+    margin-top: 50px;
+}
+
+
 /* catalog > cards */
 .product-card-catalog {
     background: white;
