@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIDE MOBILE</title>
+    <link rel="stylesheet" href="/telegram-miniapp/style.css">
+    
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+
+    <!-- jQuery и Slick JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.js" defer></script>
+</head>
+<body>
+<header class="mobile-header">
+    <div class="container d-flex justify-content-between align-items-center">
+        <img src="/telegram-miniapp/img/icons/logoind.svg" alt="PRIDE MOBILE" class="logo-img-offcanvas">
+        <div class="contact-info">
+            <p class="address_offcanvas">Интернет-магазин электроники</p>
+        </div>
+    </div>
+</header>
+<main>
+
+<section class="product-page">
+    <div class="container">
+        <!-- Хлебные крошки -->
+        <nav class="product-breadcrumbs">
+            <a href="#">Главная</a> / <a href="#">Каталог</a> / <span>Apple iPhone</span>
+        </nav>
+
+        <div class="row">
+            <!-- Галерея товара -->
+            <div class="col-lg-6 product-gallery">
+                <div class="product-main-image">
+                    <img src="/img/1q.webp" alt="Apple iPhone 15 Pro Max" class="main-product-img">
+                </div>
+                <!-- Полноэкранный слайдер -->
+                <div class="fullscreen-slider" id="fullscreenSlider">
+                    <div class="slider-content">
+                        <button class="slider-close" id="closeSlider">&times;</button>
+                        <button class="slider-prev" id="prevSlide">&#10094;</button>
+                        <img src="" alt="Fullscreen Image" id="fullscreenImage">
+                        <button class="slider-next" id="nextSlide">&#10095;</button>
+                    </div>
+                    <div class="slider-thumbnails" id="sliderThumbnails"></div>
+                </div>
+                
+                <div class="product-thumbnails">
+                    <div class="product-main-image-thumbnails">
+                        <img src="/img/1q.webp" alt="Apple iPhone 15 Pro Max" class="thumbnail-img" data-index="0">
+                    </div>
+                    <div class="product-main-image-thumbnails">
+                        <img src="/img/2q.webp" alt="Apple iPhone 15 Pro Max" class="thumbnail-img" data-index="1">
+                    </div>
+                    <div class="product-main-image-thumbnails">
+                        <img src="/img/3q.webp" alt="Apple iPhone 15 Pro Max" class="thumbnail-img" data-index="2">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Описание товара -->
+            <div class="col-lg-6 product-info">
+                <h1 class="product-title">APPLE IPHONE 15 PRO 128GB («НАТУРАЛЬНЫЙ ТИТАН»)</h1>
+
+                <!-- Выбор памяти -->
+                <div class="product-options">
+                    <h4>Объем встроенной памяти</h4>
+                    <div class="memory-options">
+                        <button class="memory-btn">64 ГБ</button>
+                        <button class="memory-btn active">128 ГБ</button>
+                        <button class="memory-btn">256 ГБ</button>
+                        <button class="memory-btn">512 ГБ</button>
+                        <button class="memory-btn">1 ТБ</button>
+                    </div>
+                </div>
+
+                <!-- Выбор цвета -->
+                <div class="product-options">
+                    <h4>Цвет</h4>
+                    <div class="color-options">
+                        <div class="color-circle" style="background-color: #D6D6D6;"></div>
+                        <div class="color-circle active" style="background-color: #1E1E1E;"></div>
+                        <div class="color-circle" style="background-color: #A07C59;"></div>
+                    </div>
+                </div>
+
+                <!-- Цена и кнопка -->
+                <div class="product-actions">
+                    <span class="product-price">100 990 ₽</span>
+                    <button class="btn btn-primary add-to-cart">В корзину</button>
+                </div>
+
+                <!-- Характеристики -->
+                <table class="product-specs">
+                    <tr><td>Тип</td><td>смартфон</td></tr>
+                    <tr><td>Операционная система</td><td>iOS</td></tr>
+                    <tr><td>Тип корпуса</td><td>классический</td></tr>
+                    <tr><td>Материал корпуса</td><td>алюминий</td></tr>
+                    <tr><td>Тип SIM-карты</td><td>nano SIM + eSIM</td></tr>
+                    <tr><td>Вес</td><td>162 г</td></tr>
+                </table>
+
+                <a href="#" class="show-all-specs">Посмотреть все характеристики</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</main>
+<footer>
+
+</footer>
+<script src="/telegram-miniapp/main.js"></script>
+</body>
+</html>
