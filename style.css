@@ -609,3 +609,7 @@
 .adaptive_mobile_first_block, .adaptive_mobile_second_block {
     display: none;
 }
+
+@media (min-width: 360px) and (max-width: 430px) {
+    
+}

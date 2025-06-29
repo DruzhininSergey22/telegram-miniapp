@@ -18,8 +18,12 @@ function renderAllProducts(products) {
   const brands = ["Apple", "Samsung", "Xiaomi"];
 
   brands.forEach((brand) => {
-    const brandContainer = document.querySelector(`#${brand} .row`);
+    const brandContainer = document.getElementById(brand);
     if (!brandContainer) return;
+
+    // Удаляем все карточки внутри .column_card_catalog
+    const existingCards = brandContainer.querySelectorAll(".column_card_catalog");
+    existingCards.forEach(el => el.remove());
 
     const productsForBrand = products.filter((p) => p.brand === brand);
     renderProductBlock(brandContainer, productsForBrand);
@@ -41,27 +45,29 @@ function applyFilters() {
 
 // Рендер карточек в конкретный контейнер
 function renderProductBlock(container, products) {
-  container.innerHTML = ""; // очистка
-
   products.forEach((p) => {
-    const card = `
-      <div class="col-lg-4 col-md-6 column_card_catalog">
-        <div class="product-card-catalog">
-          <div class="product-header-catalog">
-            <i class="far fa-heart favorite-icon"></i>
-          </div>
-          <img src="${p.image}" alt="${p.name}" class="product-img-catalog">
-          <p class="product-name-catalog">${p.name}</p>
-          <div class="product-footer-catalog">
-            <span class="product-price-catalog">${p.price.toLocaleString()} ₽</span>
-            <button class="btn btn-primary btn-pm">Посмотреть</button>
-          </div>
+    const card = document.createElement("div");
+    card.className = "col-lg-4 col-md-6 column_card_catalog";
+    card.innerHTML = `
+      <div class="product-card-catalog">
+        <div class="product-header-catalog">
+          <i class="far fa-heart favorite-icon"></i>
         </div>
-      </div>`;
-    container.innerHTML += card;
+        <img src="${p.image}" alt="${p.name}" class="product-img-catalog">
+        <p class="product-name-catalog">${p.name}</p>
+        <div class="product-footer-catalog">
+          <span class="product-price-catalog">${p.price.toLocaleString()} ₽</span>
+          <button class="btn btn-primary btn-pm">Посмотреть</button>
+        </div>
+      </div>
+    `;
+    container.appendChild(card);
   });
 
   if (products.length === 0) {
-    container.innerHTML = `<p class="text-muted">Нет товаров</p>`;
+    const empty = document.createElement("div");
+    empty.className = "col-12 text-muted";
+    empty.textContent = "Нет товаров по фильтру";
+    container.appendChild(empty);
   }
 }
