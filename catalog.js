@@ -8,29 +8,41 @@ document.addEventListener("DOMContentLoaded", () => {
       renderAllProducts(data);
     });
 
-  // Назначаем фильтры
   document.getElementById("colorFilter")?.addEventListener("change", applyFilters);
   document.getElementById("memoryFilter")?.addEventListener("change", applyFilters);
 });
 
-// Отображение товаров в блоках брендов
+// Отображение товаров по брендам
 function renderAllProducts(products) {
   const brands = ["Apple", "Samsung", "Xiaomi"];
+  let totalRendered = 0;
 
+  // Удалить старые карточки и пересоздать
   brands.forEach((brand) => {
     const brandContainer = document.getElementById(brand);
     if (!brandContainer) return;
 
-    // Удаляем все карточки внутри .column_card_catalog
     const existingCards = brandContainer.querySelectorAll(".column_card_catalog");
     existingCards.forEach(el => el.remove());
 
     const productsForBrand = products.filter((p) => p.brand === brand);
     renderProductBlock(brandContainer, productsForBrand);
+    totalRendered += productsForBrand.length;
   });
+
+  // Удалить предыдущие сообщения "Нет товаров"
+  document.querySelectorAll(".no-products-message").forEach(el => el.remove());
+
+  if (totalRendered === 0) {
+    const message = document.createElement("div");
+    message.className = "text-muted no-products-message text-center py-4 w-100";
+    message.textContent = "Нет товаров по фильтру";
+    const catalog = document.querySelector(".second_section_index_catalog");
+    catalog?.appendChild(message);
+  }
 }
 
-// Применение фильтров
+// Фильтрация по цвету и памяти
 function applyFilters() {
   const selectedColor = document.getElementById("colorFilter").value;
   const selectedMemory = document.getElementById("memoryFilter").value;
@@ -43,7 +55,7 @@ function applyFilters() {
   renderAllProducts(filtered);
 }
 
-// Рендер карточек в конкретный контейнер
+// Рендеринг карточек товара
 function renderProductBlock(container, products) {
   products.forEach((p) => {
     const card = document.createElement("div");
@@ -63,11 +75,4 @@ function renderProductBlock(container, products) {
     `;
     container.appendChild(card);
   });
-
-  if (products.length === 0) {
-    const empty = document.createElement("div");
-    empty.className = "col-12 text-muted";
-    empty.textContent = "Нет товаров по фильтру";
-    container.appendChild(empty);
-  }
 }

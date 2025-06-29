@@ -129,6 +129,7 @@
 /* Изображение карточки */
 .product-img-catalog {
     margin: 10px auto;
+    max-width: 250px;
 }
 
 /* Название продукта */
@@ -605,11 +606,31 @@
     transform: scale(1.05);
 }
 
-/* Правки главная страница */
-.adaptive_mobile_first_block, .adaptive_mobile_second_block {
-    display: none;
+
+/* filters */
+.filter-select {
+  padding: 8px 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s ease;
+  min-width: 160px;
 }
 
+.filter-select:hover {
+  border-color: #4057DA;
+  background-color: #f5f8ff;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #4057DA;
+  box-shadow: 0 0 0 2px rgba(64, 87, 218, 0.2);
+}
+
+
 @media (min-width: 360px) and (max-width: 430px) {
-    
+
 }
