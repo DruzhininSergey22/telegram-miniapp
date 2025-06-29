@@ -42,30 +42,9 @@
             <!-- Галерея товара -->
             <div class="col-lg-6 product-gallery">
                 <div class="product-main-image">
-                    <img src="/img/1q.webp" alt="Apple iPhone 15 Pro Max" class="main-product-img">
-                </div>
-                <!-- Полноэкранный слайдер -->
-                <div class="fullscreen-slider" id="fullscreenSlider">
-                    <div class="slider-content">
-                        <button class="slider-close" id="closeSlider">&times;</button>
-                        <button class="slider-prev" id="prevSlide">&#10094;</button>
-                        <img src="" alt="Fullscreen Image" id="fullscreenImage">
-                        <button class="slider-next" id="nextSlide">&#10095;</button>
-                    </div>
-                    <div class="slider-thumbnails" id="sliderThumbnails"></div>
+                    <img src="/telegram-miniapp/img/1q.webp" alt="Apple iPhone 15 Pro Max" class="main-product-img">
                 </div>
                 
-                <div class="product-thumbnails">
-                    <div class="product-main-image-thumbnails">
-                        <img src="/img/1q.webp" alt="Apple iPhone 15 Pro Max" class="thumbnail-img" data-index="0">
-                    </div>
-                    <div class="product-main-image-thumbnails">
-                        <img src="/img/2q.webp" alt="Apple iPhone 15 Pro Max" class="thumbnail-img" data-index="1">
-                    </div>
-                    <div class="product-main-image-thumbnails">
-                        <img src="/img/3q.webp" alt="Apple iPhone 15 Pro Max" class="thumbnail-img" data-index="2">
-                    </div>
-                </div>
             </div>
 
             <!-- Описание товара -->
@@ -111,6 +90,76 @@
                 </table>
 
                 <a href="#" class="show-all-specs">Посмотреть все характеристики</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="product-specs-section">
+    <div class="container precontainer-product-specs-section">
+        <div class="specs-wrapper">
+            <h2 class="specs-title">ХАРАКТЕРИСТИКИ</h2>
+
+            <!-- Вкладки -->
+            <ul class="specs-tabs">
+                <li class="tab active" data-tab="general">Общие</li>
+                <li class="tab" data-tab="screen">Экран</li>
+                <li class="tab" data-tab="camera">Камера</li>
+                <li class="tab" data-tab="connectivity">Связь</li>
+                <li class="tab" data-tab="additional">Дополнительно</li>
+            </ul>
+
+            <!-- Контент вкладок -->
+            <div class="specs-content">
+                <!-- Общие -->
+                <div class="tab-content active" id="general">
+                    <table>
+                        <tr><td>Тип</td><td>смартфон</td></tr>
+                        <tr><td>Операционная система</td><td>iOS</td></tr>
+                        <tr><td>Тип корпуса</td><td>классический</td></tr>
+                        <tr><td>Материал корпуса</td><td>алюминий</td></tr>
+                        <tr><td>Тип SIM-карты</td><td>nano SIM + eSIM</td></tr>
+                        <tr><td>Вес</td><td>162 г</td></tr>
+                    </table>
+                </div>
+
+                <!-- Экран -->
+                <div class="tab-content" id="screen">
+                    <table>
+                        <tr><td>Тип экрана</td><td>OLED</td></tr>
+                        <tr><td>Диагональ</td><td>6.1 дюйма</td></tr>
+                        <tr><td>Разрешение</td><td>2532x1170 пикселей</td></tr>
+                        <tr><td>Частота обновления</td><td>120 Гц</td></tr>
+                    </table>
+                </div>
+
+                <!-- Камера -->
+                <div class="tab-content" id="camera">
+                    <table>
+                        <tr><td>Основная камера</td><td>48 МП + 12 МП + 12 МП</td></tr>
+                        <tr><td>Фронтальная камера</td><td>12 МП</td></tr>
+                        <tr><td>Оптическая стабилизация</td><td>есть</td></tr>
+                    </table>
+                </div>
+
+                <!-- Связь -->
+                <div class="tab-content" id="connectivity">
+                    <table>
+                        <tr><td>Wi-Fi</td><td>6E</td></tr>
+                        <tr><td>Bluetooth</td><td>5.3</td></tr>
+                        <tr><td>5G</td><td>есть</td></tr>
+                        <tr><td>NFC</td><td>есть</td></tr>
+                    </table>
+                </div>
+
+                <!-- Дополнительно -->
+                <div class="tab-content" id="additional">
+                    <table>
+                        <tr><td>Защита</td><td>IP68</td></tr>
+                        <tr><td>Разъем</td><td>USB-C</td></tr>
+                        <tr><td>Поддержка Apple Pay</td><td>есть</td></tr>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
