@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "brand": "Apple",
+    "name": "iPhone 16 Pro Max 256GB",
+    "price": 100990,
+    "color": "черный",
+    "memory": "256GB",
+    "image": "/telegram-miniapp/img/1q.webp"
+  },
+  {
+    "id": 2,
+    "brand": "Apple",
+    "name": "iPhone 15 Pro 512GB",
+    "price": 115990,
+    "color": "белый",
+    "memory": "512GB",
+    "image": "/telegram-miniapp/img/6q.webp"
+  }
+]
