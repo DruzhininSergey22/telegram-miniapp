@@ -1,19 +1,19 @@
-// табы комплектов
-document.addEventListener("DOMContentLoaded", function () {
-    const tabs = document.querySelectorAll(".bundle-tab");
-    const tabContents = document.querySelectorAll(".bundle-tab-content");
 
-    tabs.forEach(tab => {
-        tab.addEventListener("click", function () {
-            const target = this.getAttribute("data-tab");
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".specs-tabs .tab");
+  const contents = document.querySelectorAll(".specs-content .tab-content");
 
-            // Удаляем активные классы
-            tabs.forEach(t => t.classList.remove("active"));
-            tabContents.forEach(content => content.classList.remove("active"));
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      const target = tab.dataset.tab;
 
-            // Добавляем активный класс к выбранной вкладке и контенту
-            this.classList.add("active");
-            document.getElementById(target).classList.add("active");
-        });
+      // Удаляем active у всех табов и контента
+      tabs.forEach(t => t.classList.remove("active"));
+      contents.forEach(c => c.classList.remove("active"));
+
+      // Активируем выбранные
+      tab.classList.add("active");
+      document.getElementById(target).classList.add("active");
     });
+  });
 });
