@@ -617,6 +617,7 @@
   color: #333;
   transition: all 0.3s ease;
   min-width: 160px;
+  margin-top: 50px;
 }
 
 .filter-select:hover {
