@@ -633,5 +633,9 @@
 
 
 @media (min-width: 360px) and (max-width: 430px) {
+    .specs-tabs {
+        gap: 15;
+        flex-wrap: wrap;
+    }
 
 }
